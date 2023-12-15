@@ -13,6 +13,17 @@ const pool = new Pool({
   
 });
 
+pool.connect().then((err,res)=>{
+if(err){
+
+  console.log(err)
+}
+else(
+  console.log(res)
+)
+
+})
+
 
 module.exports = {
   query: (text, params) => pool.query(text, params),
